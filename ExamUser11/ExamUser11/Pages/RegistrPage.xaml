@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamUser11.Pages.RegistrPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Frame HeightRequest="60" 
+                       WidthRequest="30000"
+                        HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       Padding="0" 
+                       BackgroundColor="Black">
+                    <Label
+                    FontSize="25" 
+                    TextColor="White" 
+                    Margin="10"
+                    HorizontalOptions="Center"
+                    Text="Регистрация"
+                    BackgroundColor="Black"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Entry
+                                HeightRequest="60"
+                                FontSize="20"
+                                x:Name="Name"
+                                TextColor="Black"
+                                ClearButtonVisibility="WhileEditing"
+                                Placeholder="Имя"
+                                PlaceholderColor="Gray"
+                                Margin="40,10,40,0"
+                                BackgroundColor="#cdcdcd"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry
+                                HeightRequest="60"
+                                FontSize="20"
+                                x:Name="Password"
+                                TextColor="Black" 
+                                ClearButtonVisibility="WhileEditing"
+                                Placeholder="Пароль"
+                                PlaceholderColor="Gray"
+                                Margin="40,10,5,0"
+                                WidthRequest="260"
+                                BackgroundColor="#cdcdcd"
+                                MaxLength="6"
+                                IsPassword="True"
+                                Keyboard="Numeric"
+                                />
+                
+                <Frame HeightRequest="50" 
+                       WidthRequest="50" 
+                       CornerRadius="25" 
+                       Margin="5,10,0,0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"
+                       Padding="0" 
+                       BackgroundColor="Black">
+                    <Button Text="Глаз" 
+                            FontSize="10"
+                           TextColor="White"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"
+                            BackgroundColor="Black"
+                            Clicked="GlazBut1Cl"/>
+                </Frame>
+            </StackLayout>
+            <Label Text="Ввидите больше 4 цифр"
+                       TextColor="Red"
+                       IsVisible="false"
+                       x:Name="warning"
+                       FontSize="10"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry
+                    HeightRequest="60"
+                                FontSize="20"
+                                x:Name="Password2"
+                                TextColor="Black" 
+                                ClearButtonVisibility="WhileEditing"
+                                Placeholder="Пароль"
+                                PlaceholderColor="Gray"
+                                Margin="40,10,5,0"
+                                WidthRequest="260"
+                                BackgroundColor="#cdcdcd"
+                                MaxLength="6"
+                                IsPassword="True"
+                                Keyboard="Numeric"/>
+                <Frame HeightRequest="50" 
+                       WidthRequest="50" 
+                       CornerRadius="25" 
+                       Margin="5,10,0,0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"
+                       Padding="0" 
+                       BackgroundColor="Black">
+                    <Button Text="Глаз" 
+                            FontSize="10"
+                           TextColor="White"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"
+                            BackgroundColor="Black"
+                            x:Name="Glaz2"
+                            Clicked="GlazBut2Cl"/>
+                </Frame>
+
+            </StackLayout>
+            <Label Text="Пароли не совпадают"
+                       TextColor="Red"
+                       IsVisible="false"
+                       x:Name="warning2"
+                       FontSize="10"/>
+            <Frame HeightRequest="60" 
+                       WidthRequest="180" 
+                       CornerRadius="30"
+                        HorizontalOptions="Center"
+                       Margin="0,300,0,0"
+                       VerticalOptions="Start"
+                       Padding="0" 
+                       BackgroundColor="Black">
+                <Button
+                    FontSize="17" 
+                    TextColor="White" 
+                    HorizontalOptions="Center"
+                    x:Name="RegBut"
+                    Text="Регистрация"
+                    BackgroundColor="Black"
+                    Clicked="RegBut_Clicked"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
