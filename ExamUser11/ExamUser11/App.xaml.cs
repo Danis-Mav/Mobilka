@@ -5,10 +5,26 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace ExamUser11
 {
     public partial class App : Application
     {
+        public const string DATABASE_NAME = "project.db";
+        public static ProjectRepository database;
+        public static ProjectRepository Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new ProjectRepository(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
+                }
+                return database;
+            }
+        }
 
         public App()
         {
